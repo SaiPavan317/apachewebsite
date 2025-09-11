@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/sampathkumarkanumolu/apachewebsite.git'
+                git branch: 'master', url: 'https://github.com/SaiPavan317/apachewebsite.git'
             }
         }
         stage('Ansible Install Apache') {
@@ -30,3 +30,4 @@ pipeline {
         }
     }
 }
+
