@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: apache-website
-        image: saipavan17/apache-website:v1
+        image: harish6303/apache-website:v1
         ports:
         - containerPort: 80
 ---
@@ -26,6 +26,10 @@ spec:
   selector:
     app: apache-website
   ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
     - protocol: TCP
       port: 80
       targetPort: 80
